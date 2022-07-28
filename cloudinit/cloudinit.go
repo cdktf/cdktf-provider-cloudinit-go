@@ -3,10 +3,10 @@ package cloudinit
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/hashicorp/cdktf-provider-cloudinit-go/cloudinit/jsii"
+	_init_ "github.com/hashicorp/cdktf-provider-cloudinit-go/cloudinit/v2/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/hashicorp/cdktf-provider-cloudinit-go/cloudinit/internal"
+	"github.com/hashicorp/cdktf-provider-cloudinit-go/cloudinit/v2/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -361,6 +361,10 @@ type Config interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -370,6 +374,10 @@ type Config interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -392,6 +400,10 @@ type Config interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	Rendered() *string
@@ -499,6 +511,16 @@ func (j *jsiiProxy_Config) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_Config) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Config) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -524,6 +546,16 @@ func (j *jsiiProxy_Config) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Config) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -639,6 +671,16 @@ func (j *jsiiProxy_Config) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
+func (j *jsiiProxy_Config) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_Config) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
@@ -732,6 +774,14 @@ func (j *jsiiProxy_Config) SetBoundary(val *string) {
 	)
 }
 
+func (j *jsiiProxy_Config) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_Config) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -744,6 +794,14 @@ func (j *jsiiProxy_Config) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Config) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -776,6 +834,14 @@ func (j *jsiiProxy_Config) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Config) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -1071,13 +1137,19 @@ func (c *jsiiProxy_Config) ToTerraform() interface{} {
 
 type ConfigConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// part block.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/r/config#part Config#part}
@@ -1871,6 +1943,10 @@ type DataCloudinitConfig interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
+	// Experimental.
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
@@ -2024,6 +2100,16 @@ func (j *jsiiProxy_DataCloudinitConfig) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataCloudinitConfig) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -2244,6 +2330,14 @@ func (j *jsiiProxy_DataCloudinitConfig) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataCloudinitConfig) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -2571,13 +2665,19 @@ func (d *jsiiProxy_DataCloudinitConfig) ToTerraform() interface{} {
 
 type DataCloudinitConfigConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// part block.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/cloudinit/d/config#part DataCloudinitConfig#part}
