@@ -185,6 +185,9 @@ func (j *jsiiProxy_CloudinitProvider) TerraformResourceType() *string {
 func NewCloudinitProvider(scope constructs.Construct, id *string, config *CloudinitProviderConfig) CloudinitProvider {
 	_init_.Initialize()
 
+	if err := validateNewCloudinitProviderParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_CloudinitProvider{}
 
 	_jsii_.Create(
@@ -207,7 +210,7 @@ func NewCloudinitProvider_Override(c CloudinitProvider, scope constructs.Constru
 	)
 }
 
-func (j *jsiiProxy_CloudinitProvider) SetAlias(val *string) {
+func (j *jsiiProxy_CloudinitProvider)SetAlias(val *string) {
 	_jsii_.Set(
 		j,
 		"alias",
@@ -235,6 +238,9 @@ func (j *jsiiProxy_CloudinitProvider) SetAlias(val *string) {
 func CloudinitProvider_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateCloudinitProvider_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -259,6 +265,9 @@ func CloudinitProvider_TfResourceType() *string {
 }
 
 func (c *jsiiProxy_CloudinitProvider) AddOverride(path *string, value interface{}) {
+	if err := c.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"addOverride",
@@ -267,6 +276,9 @@ func (c *jsiiProxy_CloudinitProvider) AddOverride(path *string, value interface{
 }
 
 func (c *jsiiProxy_CloudinitProvider) OverrideLogicalId(newLogicalId *string) {
+	if err := c.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		c,
 		"overrideLogicalId",

@@ -111,6 +111,9 @@ func (j *jsiiProxy_DataCloudinitConfigPartList) WrapsSet() *bool {
 func NewDataCloudinitConfigPartList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataCloudinitConfigPartList {
 	_init_.Initialize()
 
+	if err := validateNewDataCloudinitConfigPartListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataCloudinitConfigPartList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewDataCloudinitConfigPartList_Override(d DataCloudinitConfigPartList, terr
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfigPartList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_DataCloudinitConfigPartList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_DataCloudinitConfigPartList) SetInternalValue(val interface{}
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfigPartList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataCloudinitConfigPartList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_DataCloudinitConfigPartList) SetTerraformAttribute(val *strin
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfigPartList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataCloudinitConfigPartList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_DataCloudinitConfigPartList) SetTerraformResource(val cdktf.I
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfigPartList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataCloudinitConfigPartList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (d *jsiiProxy_DataCloudinitConfigPartList) ComputeFqn() *string {
 }
 
 func (d *jsiiProxy_DataCloudinitConfigPartList) Get(index *float64) DataCloudinitConfigPartOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataCloudinitConfigPartOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (d *jsiiProxy_DataCloudinitConfigPartList) Get(index *float64) DataCloudini
 }
 
 func (d *jsiiProxy_DataCloudinitConfigPartList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

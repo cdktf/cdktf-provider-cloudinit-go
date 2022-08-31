@@ -111,6 +111,9 @@ func (j *jsiiProxy_ConfigPartList) WrapsSet() *bool {
 func NewConfigPartList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) ConfigPartList {
 	_init_.Initialize()
 
+	if err := validateNewConfigPartListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_ConfigPartList{}
 
 	_jsii_.Create(
@@ -132,7 +135,10 @@ func NewConfigPartList_Override(c ConfigPartList, terraformResource cdktf.IInter
 	)
 }
 
-func (j *jsiiProxy_ConfigPartList) SetInternalValue(val interface{}) {
+func (j *jsiiProxy_ConfigPartList)SetInternalValue(val interface{}) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -140,7 +146,10 @@ func (j *jsiiProxy_ConfigPartList) SetInternalValue(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_ConfigPartList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_ConfigPartList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -148,7 +157,10 @@ func (j *jsiiProxy_ConfigPartList) SetTerraformAttribute(val *string) {
 	)
 }
 
-func (j *jsiiProxy_ConfigPartList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_ConfigPartList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -156,7 +168,10 @@ func (j *jsiiProxy_ConfigPartList) SetTerraformResource(val cdktf.IInterpolating
 	)
 }
 
-func (j *jsiiProxy_ConfigPartList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_ConfigPartList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -178,6 +193,9 @@ func (c *jsiiProxy_ConfigPartList) ComputeFqn() *string {
 }
 
 func (c *jsiiProxy_ConfigPartList) Get(index *float64) ConfigPartOutputReference {
+	if err := c.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns ConfigPartOutputReference
 
 	_jsii_.Invoke(
@@ -191,6 +209,9 @@ func (c *jsiiProxy_ConfigPartList) Get(index *float64) ConfigPartOutputReference
 }
 
 func (c *jsiiProxy_ConfigPartList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(
