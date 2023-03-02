@@ -84,10 +84,6 @@ func (j *jsiiProxy_Config) validateSetGzipParameters(val interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_Config) validateSetIdParameters(val *string) error {
-	return nil
-}
-
 func (j *jsiiProxy_Config) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

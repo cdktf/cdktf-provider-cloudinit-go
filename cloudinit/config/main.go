@@ -1,4 +1,4 @@
-package datacloudinitconfig
+package config
 
 import (
 	"reflect"
@@ -8,8 +8,8 @@ import (
 
 func init() {
 	_jsii_.RegisterClass(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig",
-		reflect.TypeOf((*DataCloudinitConfig)(nil)).Elem(),
+		"@cdktf/provider-cloudinit.config.Config",
+		reflect.TypeOf((*Config)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "addOverride", GoMethod: "AddOverride"},
 			_jsii_.MemberProperty{JsiiProperty: "base64Encode", GoGetter: "Base64Encode"},
@@ -17,6 +17,7 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "boundary", GoGetter: "Boundary"},
 			_jsii_.MemberProperty{JsiiProperty: "boundaryInput", GoGetter: "BoundaryInput"},
 			_jsii_.MemberProperty{JsiiProperty: "cdktfStack", GoGetter: "CdktfStack"},
+			_jsii_.MemberProperty{JsiiProperty: "connection", GoGetter: "Connection"},
 			_jsii_.MemberProperty{JsiiProperty: "constructNodeMetadata", GoGetter: "ConstructNodeMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "count", GoGetter: "Count"},
 			_jsii_.MemberProperty{JsiiProperty: "dependsOn", GoGetter: "DependsOn"},
@@ -35,7 +36,6 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "gzip", GoGetter: "Gzip"},
 			_jsii_.MemberProperty{JsiiProperty: "gzipInput", GoGetter: "GzipInput"},
 			_jsii_.MemberProperty{JsiiProperty: "id", GoGetter: "Id"},
-			_jsii_.MemberProperty{JsiiProperty: "idInput", GoGetter: "IdInput"},
 			_jsii_.MemberMethod{JsiiMethod: "interpolationForAttribute", GoMethod: "InterpolationForAttribute"},
 			_jsii_.MemberProperty{JsiiProperty: "lifecycle", GoGetter: "Lifecycle"},
 			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
@@ -43,14 +43,15 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "part", GoGetter: "Part"},
 			_jsii_.MemberProperty{JsiiProperty: "partInput", GoGetter: "PartInput"},
 			_jsii_.MemberProperty{JsiiProperty: "provider", GoGetter: "Provider"},
+			_jsii_.MemberProperty{JsiiProperty: "provisioners", GoGetter: "Provisioners"},
 			_jsii_.MemberMethod{JsiiMethod: "putPart", GoMethod: "PutPart"},
 			_jsii_.MemberProperty{JsiiProperty: "rawOverrides", GoGetter: "RawOverrides"},
 			_jsii_.MemberProperty{JsiiProperty: "rendered", GoGetter: "Rendered"},
 			_jsii_.MemberMethod{JsiiMethod: "resetBase64Encode", GoMethod: "ResetBase64Encode"},
 			_jsii_.MemberMethod{JsiiMethod: "resetBoundary", GoMethod: "ResetBoundary"},
 			_jsii_.MemberMethod{JsiiMethod: "resetGzip", GoMethod: "ResetGzip"},
-			_jsii_.MemberMethod{JsiiMethod: "resetId", GoMethod: "ResetId"},
 			_jsii_.MemberMethod{JsiiMethod: "resetOverrideLogicalId", GoMethod: "ResetOverrideLogicalId"},
+			_jsii_.MemberMethod{JsiiMethod: "resetPart", GoMethod: "ResetPart"},
 			_jsii_.MemberMethod{JsiiMethod: "synthesizeAttributes", GoMethod: "SynthesizeAttributes"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformGeneratorMetadata", GoGetter: "TerraformGeneratorMetadata"},
 			_jsii_.MemberProperty{JsiiProperty: "terraformMetaArguments", GoGetter: "TerraformMetaArguments"},
@@ -60,22 +61,22 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "toTerraform", GoMethod: "ToTerraform"},
 		},
 		func() interface{} {
-			j := jsiiProxy_DataCloudinitConfig{}
-			_jsii_.InitJsiiProxy(&j.Type__cdktfTerraformDataSource)
+			j := jsiiProxy_Config{}
+			_jsii_.InitJsiiProxy(&j.Type__cdktfTerraformResource)
 			return &j
 		},
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigConfig",
-		reflect.TypeOf((*DataCloudinitConfigConfig)(nil)).Elem(),
+		"@cdktf/provider-cloudinit.config.ConfigConfig",
+		reflect.TypeOf((*ConfigConfig)(nil)).Elem(),
 	)
 	_jsii_.RegisterStruct(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPart",
-		reflect.TypeOf((*DataCloudinitConfigPart)(nil)).Elem(),
+		"@cdktf/provider-cloudinit.config.ConfigPart",
+		reflect.TypeOf((*ConfigPart)(nil)).Elem(),
 	)
 	_jsii_.RegisterClass(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartList",
-		reflect.TypeOf((*DataCloudinitConfigPartList)(nil)).Elem(),
+		"@cdktf/provider-cloudinit.config.ConfigPartList",
+		reflect.TypeOf((*ConfigPartList)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberMethod{JsiiMethod: "computeFqn", GoMethod: "ComputeFqn"},
 			_jsii_.MemberProperty{JsiiProperty: "creationStack", GoGetter: "CreationStack"},
@@ -89,14 +90,14 @@ func init() {
 			_jsii_.MemberProperty{JsiiProperty: "wrapsSet", GoGetter: "WrapsSet"},
 		},
 		func() interface{} {
-			j := jsiiProxy_DataCloudinitConfigPartList{}
+			j := jsiiProxy_ConfigPartList{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexList)
 			return &j
 		},
 	)
 	_jsii_.RegisterClass(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfigPartOutputReference",
-		reflect.TypeOf((*DataCloudinitConfigPartOutputReference)(nil)).Elem(),
+		"@cdktf/provider-cloudinit.config.ConfigPartOutputReference",
+		reflect.TypeOf((*ConfigPartOutputReference)(nil)).Elem(),
 		[]_jsii_.Member{
 			_jsii_.MemberProperty{JsiiProperty: "complexObjectIndex", GoGetter: "ComplexObjectIndex"},
 			_jsii_.MemberProperty{JsiiProperty: "complexObjectIsFromSet", GoGetter: "ComplexObjectIsFromSet"},
@@ -132,7 +133,7 @@ func init() {
 			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
 		},
 		func() interface{} {
-			j := jsiiProxy_DataCloudinitConfigPartOutputReference{}
+			j := jsiiProxy_ConfigPartOutputReference{}
 			_jsii_.InitJsiiProxy(&j.Type__cdktfComplexObject)
 			return &j
 		},

@@ -1,17 +1,17 @@
-package datacloudinitconfig
+package config
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 	_init_ "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v5/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v5/datacloudinitconfig/internal"
+	"github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v5/config/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://www.terraform.io/docs/providers/cloudinit/d/config cloudinit_config}.
-type DataCloudinitConfig interface {
-	cdktf.TerraformDataSource
+// Represents a {@link https://www.terraform.io/docs/providers/cloudinit/r/config cloudinit_config}.
+type Config interface {
+	cdktf.TerraformResource
 	Base64Encode() interface{}
 	SetBase64Encode(val interface{})
 	Base64EncodeInput() interface{}
@@ -20,6 +20,10 @@ type DataCloudinitConfig interface {
 	BoundaryInput() *string
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
+	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -42,20 +46,22 @@ type DataCloudinitConfig interface {
 	SetGzip(val interface{})
 	GzipInput() interface{}
 	Id() *string
-	SetId(val *string)
-	IdInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
 	SetLifecycle(val *cdktf.TerraformResourceLifecycle)
 	// The tree node.
 	Node() constructs.Node
-	Part() DataCloudinitConfigPartList
+	Part() ConfigPartList
 	PartInput() interface{}
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	Rendered() *string
@@ -94,10 +100,10 @@ type DataCloudinitConfig interface {
 	ResetBase64Encode()
 	ResetBoundary()
 	ResetGzip()
-	ResetId()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
+	ResetPart()
 	SynthesizeAttributes() *map[string]interface{}
 	// Experimental.
 	ToMetadata() interface{}
@@ -108,12 +114,12 @@ type DataCloudinitConfig interface {
 	ToTerraform() interface{}
 }
 
-// The jsii proxy struct for DataCloudinitConfig
-type jsiiProxy_DataCloudinitConfig struct {
-	internal.Type__cdktfTerraformDataSource
+// The jsii proxy struct for Config
+type jsiiProxy_Config struct {
+	internal.Type__cdktfTerraformResource
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Base64Encode() interface{} {
+func (j *jsiiProxy_Config) Base64Encode() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -123,7 +129,7 @@ func (j *jsiiProxy_DataCloudinitConfig) Base64Encode() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Base64EncodeInput() interface{} {
+func (j *jsiiProxy_Config) Base64EncodeInput() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -133,7 +139,7 @@ func (j *jsiiProxy_DataCloudinitConfig) Base64EncodeInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Boundary() *string {
+func (j *jsiiProxy_Config) Boundary() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -143,7 +149,7 @@ func (j *jsiiProxy_DataCloudinitConfig) Boundary() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) BoundaryInput() *string {
+func (j *jsiiProxy_Config) BoundaryInput() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -153,7 +159,7 @@ func (j *jsiiProxy_DataCloudinitConfig) BoundaryInput() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) CdktfStack() cdktf.TerraformStack {
+func (j *jsiiProxy_Config) CdktfStack() cdktf.TerraformStack {
 	var returns cdktf.TerraformStack
 	_jsii_.Get(
 		j,
@@ -163,7 +169,17 @@ func (j *jsiiProxy_DataCloudinitConfig) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) ConstructNodeMetadata() *map[string]interface{} {
+func (j *jsiiProxy_Config) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Config) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -173,7 +189,7 @@ func (j *jsiiProxy_DataCloudinitConfig) ConstructNodeMetadata() *map[string]inte
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Count() *float64 {
+func (j *jsiiProxy_Config) Count() *float64 {
 	var returns *float64
 	_jsii_.Get(
 		j,
@@ -183,7 +199,7 @@ func (j *jsiiProxy_DataCloudinitConfig) Count() *float64 {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) DependsOn() *[]*string {
+func (j *jsiiProxy_Config) DependsOn() *[]*string {
 	var returns *[]*string
 	_jsii_.Get(
 		j,
@@ -193,7 +209,7 @@ func (j *jsiiProxy_DataCloudinitConfig) DependsOn() *[]*string {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) ForEach() cdktf.ITerraformIterator {
+func (j *jsiiProxy_Config) ForEach() cdktf.ITerraformIterator {
 	var returns cdktf.ITerraformIterator
 	_jsii_.Get(
 		j,
@@ -203,7 +219,7 @@ func (j *jsiiProxy_DataCloudinitConfig) ForEach() cdktf.ITerraformIterator {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Fqn() *string {
+func (j *jsiiProxy_Config) Fqn() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -213,7 +229,7 @@ func (j *jsiiProxy_DataCloudinitConfig) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) FriendlyUniqueId() *string {
+func (j *jsiiProxy_Config) FriendlyUniqueId() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -223,7 +239,7 @@ func (j *jsiiProxy_DataCloudinitConfig) FriendlyUniqueId() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Gzip() interface{} {
+func (j *jsiiProxy_Config) Gzip() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -233,7 +249,7 @@ func (j *jsiiProxy_DataCloudinitConfig) Gzip() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) GzipInput() interface{} {
+func (j *jsiiProxy_Config) GzipInput() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -243,7 +259,7 @@ func (j *jsiiProxy_DataCloudinitConfig) GzipInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Id() *string {
+func (j *jsiiProxy_Config) Id() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -253,17 +269,7 @@ func (j *jsiiProxy_DataCloudinitConfig) Id() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) IdInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"idInput",
-		&returns,
-	)
-	return returns
-}
-
-func (j *jsiiProxy_DataCloudinitConfig) Lifecycle() *cdktf.TerraformResourceLifecycle {
+func (j *jsiiProxy_Config) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
 		j,
@@ -273,7 +279,7 @@ func (j *jsiiProxy_DataCloudinitConfig) Lifecycle() *cdktf.TerraformResourceLife
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Node() constructs.Node {
+func (j *jsiiProxy_Config) Node() constructs.Node {
 	var returns constructs.Node
 	_jsii_.Get(
 		j,
@@ -283,8 +289,8 @@ func (j *jsiiProxy_DataCloudinitConfig) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Part() DataCloudinitConfigPartList {
-	var returns DataCloudinitConfigPartList
+func (j *jsiiProxy_Config) Part() ConfigPartList {
+	var returns ConfigPartList
 	_jsii_.Get(
 		j,
 		"part",
@@ -293,7 +299,7 @@ func (j *jsiiProxy_DataCloudinitConfig) Part() DataCloudinitConfigPartList {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) PartInput() interface{} {
+func (j *jsiiProxy_Config) PartInput() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -303,7 +309,7 @@ func (j *jsiiProxy_DataCloudinitConfig) PartInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Provider() cdktf.TerraformProvider {
+func (j *jsiiProxy_Config) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
 		j,
@@ -313,7 +319,17 @@ func (j *jsiiProxy_DataCloudinitConfig) Provider() cdktf.TerraformProvider {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) RawOverrides() interface{} {
+func (j *jsiiProxy_Config) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_Config) RawOverrides() interface{} {
 	var returns interface{}
 	_jsii_.Get(
 		j,
@@ -323,7 +339,7 @@ func (j *jsiiProxy_DataCloudinitConfig) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) Rendered() *string {
+func (j *jsiiProxy_Config) Rendered() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -333,7 +349,7 @@ func (j *jsiiProxy_DataCloudinitConfig) Rendered() *string {
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
+func (j *jsiiProxy_Config) TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata {
 	var returns *cdktf.TerraformProviderGeneratorMetadata
 	_jsii_.Get(
 		j,
@@ -343,7 +359,7 @@ func (j *jsiiProxy_DataCloudinitConfig) TerraformGeneratorMetadata() *cdktf.Terr
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) TerraformMetaArguments() *map[string]interface{} {
+func (j *jsiiProxy_Config) TerraformMetaArguments() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
 		j,
@@ -353,7 +369,7 @@ func (j *jsiiProxy_DataCloudinitConfig) TerraformMetaArguments() *map[string]int
 	return returns
 }
 
-func (j *jsiiProxy_DataCloudinitConfig) TerraformResourceType() *string {
+func (j *jsiiProxy_Config) TerraformResourceType() *string {
 	var returns *string
 	_jsii_.Get(
 		j,
@@ -364,17 +380,17 @@ func (j *jsiiProxy_DataCloudinitConfig) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://www.terraform.io/docs/providers/cloudinit/d/config cloudinit_config} Data Source.
-func NewDataCloudinitConfig(scope constructs.Construct, id *string, config *DataCloudinitConfigConfig) DataCloudinitConfig {
+// Create a new {@link https://www.terraform.io/docs/providers/cloudinit/r/config cloudinit_config} Resource.
+func NewConfig(scope constructs.Construct, id *string, config *ConfigConfig) Config {
 	_init_.Initialize()
 
-	if err := validateNewDataCloudinitConfigParameters(scope, id, config); err != nil {
+	if err := validateNewConfigParameters(scope, id, config); err != nil {
 		panic(err)
 	}
-	j := jsiiProxy_DataCloudinitConfig{}
+	j := jsiiProxy_Config{}
 
 	_jsii_.Create(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig",
+		"@cdktf/provider-cloudinit.config.Config",
 		[]interface{}{scope, id, config},
 		&j,
 	)
@@ -382,18 +398,18 @@ func NewDataCloudinitConfig(scope constructs.Construct, id *string, config *Data
 	return &j
 }
 
-// Create a new {@link https://www.terraform.io/docs/providers/cloudinit/d/config cloudinit_config} Data Source.
-func NewDataCloudinitConfig_Override(d DataCloudinitConfig, scope constructs.Construct, id *string, config *DataCloudinitConfigConfig) {
+// Create a new {@link https://www.terraform.io/docs/providers/cloudinit/r/config cloudinit_config} Resource.
+func NewConfig_Override(c Config, scope constructs.Construct, id *string, config *ConfigConfig) {
 	_init_.Initialize()
 
 	_jsii_.Create(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig",
+		"@cdktf/provider-cloudinit.config.Config",
 		[]interface{}{scope, id, config},
-		d,
+		c,
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfig)SetBase64Encode(val interface{}) {
+func (j *jsiiProxy_Config)SetBase64Encode(val interface{}) {
 	if err := j.validateSetBase64EncodeParameters(val); err != nil {
 		panic(err)
 	}
@@ -404,7 +420,7 @@ func (j *jsiiProxy_DataCloudinitConfig)SetBase64Encode(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfig)SetBoundary(val *string) {
+func (j *jsiiProxy_Config)SetBoundary(val *string) {
 	if err := j.validateSetBoundaryParameters(val); err != nil {
 		panic(err)
 	}
@@ -415,7 +431,18 @@ func (j *jsiiProxy_DataCloudinitConfig)SetBoundary(val *string) {
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfig)SetCount(val *float64) {
+func (j *jsiiProxy_Config)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Config)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -423,7 +450,7 @@ func (j *jsiiProxy_DataCloudinitConfig)SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfig)SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_Config)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -431,7 +458,7 @@ func (j *jsiiProxy_DataCloudinitConfig)SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfig)SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_Config)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -439,7 +466,7 @@ func (j *jsiiProxy_DataCloudinitConfig)SetForEach(val cdktf.ITerraformIterator) 
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfig)SetGzip(val interface{}) {
+func (j *jsiiProxy_Config)SetGzip(val interface{}) {
 	if err := j.validateSetGzipParameters(val); err != nil {
 		panic(err)
 	}
@@ -450,18 +477,7 @@ func (j *jsiiProxy_DataCloudinitConfig)SetGzip(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfig)SetId(val *string) {
-	if err := j.validateSetIdParameters(val); err != nil {
-		panic(err)
-	}
-	_jsii_.Set(
-		j,
-		"id",
-		val,
-	)
-}
-
-func (j *jsiiProxy_DataCloudinitConfig)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_Config)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	if err := j.validateSetLifecycleParameters(val); err != nil {
 		panic(err)
 	}
@@ -472,10 +488,21 @@ func (j *jsiiProxy_DataCloudinitConfig)SetLifecycle(val *cdktf.TerraformResource
 	)
 }
 
-func (j *jsiiProxy_DataCloudinitConfig)SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_Config)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_Config)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -497,16 +524,16 @@ func (j *jsiiProxy_DataCloudinitConfig)SetProvider(val cdktf.TerraformProvider) 
 // this type-testing method instead.
 //
 // Returns: true if `x` is an object created from a class which extends `Construct`.
-func DataCloudinitConfig_IsConstruct(x interface{}) *bool {
+func Config_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateDataCloudinitConfig_IsConstructParameters(x); err != nil {
+	if err := validateConfig_IsConstructParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig",
+		"@cdktf/provider-cloudinit.config.Config",
 		"isConstruct",
 		[]interface{}{x},
 		&returns,
@@ -516,35 +543,16 @@ func DataCloudinitConfig_IsConstruct(x interface{}) *bool {
 }
 
 // Experimental.
-func DataCloudinitConfig_IsTerraformDataSource(x interface{}) *bool {
+func Config_IsTerraformElement(x interface{}) *bool {
 	_init_.Initialize()
 
-	if err := validateDataCloudinitConfig_IsTerraformDataSourceParameters(x); err != nil {
+	if err := validateConfig_IsTerraformElementParameters(x); err != nil {
 		panic(err)
 	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig",
-		"isTerraformDataSource",
-		[]interface{}{x},
-		&returns,
-	)
-
-	return returns
-}
-
-// Experimental.
-func DataCloudinitConfig_IsTerraformElement(x interface{}) *bool {
-	_init_.Initialize()
-
-	if err := validateDataCloudinitConfig_IsTerraformElementParameters(x); err != nil {
-		panic(err)
-	}
-	var returns *bool
-
-	_jsii_.StaticInvoke(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig",
+		"@cdktf/provider-cloudinit.config.Config",
 		"isTerraformElement",
 		[]interface{}{x},
 		&returns,
@@ -553,36 +561,55 @@ func DataCloudinitConfig_IsTerraformElement(x interface{}) *bool {
 	return returns
 }
 
-func DataCloudinitConfig_TfResourceType() *string {
+// Experimental.
+func Config_IsTerraformResource(x interface{}) *bool {
+	_init_.Initialize()
+
+	if err := validateConfig_IsTerraformResourceParameters(x); err != nil {
+		panic(err)
+	}
+	var returns *bool
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-cloudinit.config.Config",
+		"isTerraformResource",
+		[]interface{}{x},
+		&returns,
+	)
+
+	return returns
+}
+
+func Config_TfResourceType() *string {
 	_init_.Initialize()
 	var returns *string
 	_jsii_.StaticGet(
-		"@cdktf/provider-cloudinit.dataCloudinitConfig.DataCloudinitConfig",
+		"@cdktf/provider-cloudinit.config.Config",
 		"tfResourceType",
 		&returns,
 	)
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) AddOverride(path *string, value interface{}) {
-	if err := d.validateAddOverrideParameters(path, value); err != nil {
+func (c *jsiiProxy_Config) AddOverride(path *string, value interface{}) {
+	if err := c.validateAddOverrideParameters(path, value); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		d,
+		c,
 		"addOverride",
 		[]interface{}{path, value},
 	)
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
-	if err := d.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+func (c *jsiiProxy_Config) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := c.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"getAnyMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -591,14 +618,14 @@ func (d *jsiiProxy_DataCloudinitConfig) GetAnyMapAttribute(terraformAttribute *s
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
-	if err := d.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+func (c *jsiiProxy_Config) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := c.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"getBooleanAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -607,14 +634,14 @@ func (d *jsiiProxy_DataCloudinitConfig) GetBooleanAttribute(terraformAttribute *
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
-	if err := d.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+func (c *jsiiProxy_Config) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := c.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"getBooleanMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -623,14 +650,14 @@ func (d *jsiiProxy_DataCloudinitConfig) GetBooleanMapAttribute(terraformAttribut
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) GetListAttribute(terraformAttribute *string) *[]*string {
-	if err := d.validateGetListAttributeParameters(terraformAttribute); err != nil {
+func (c *jsiiProxy_Config) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := c.validateGetListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"getListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -639,14 +666,14 @@ func (d *jsiiProxy_DataCloudinitConfig) GetListAttribute(terraformAttribute *str
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) GetNumberAttribute(terraformAttribute *string) *float64 {
-	if err := d.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+func (c *jsiiProxy_Config) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := c.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *float64
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"getNumberAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -655,14 +682,14 @@ func (d *jsiiProxy_DataCloudinitConfig) GetNumberAttribute(terraformAttribute *s
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
-	if err := d.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+func (c *jsiiProxy_Config) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := c.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"getNumberListAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -671,14 +698,14 @@ func (d *jsiiProxy_DataCloudinitConfig) GetNumberListAttribute(terraformAttribut
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
-	if err := d.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+func (c *jsiiProxy_Config) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := c.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"getNumberMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -687,14 +714,14 @@ func (d *jsiiProxy_DataCloudinitConfig) GetNumberMapAttribute(terraformAttribute
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) GetStringAttribute(terraformAttribute *string) *string {
-	if err := d.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+func (c *jsiiProxy_Config) GetStringAttribute(terraformAttribute *string) *string {
+	if err := c.validateGetStringAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"getStringAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -703,14 +730,14 @@ func (d *jsiiProxy_DataCloudinitConfig) GetStringAttribute(terraformAttribute *s
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
-	if err := d.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+func (c *jsiiProxy_Config) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := c.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"getStringMapAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -719,14 +746,14 @@ func (d *jsiiProxy_DataCloudinitConfig) GetStringMapAttribute(terraformAttribute
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
-	if err := d.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+func (c *jsiiProxy_Config) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := c.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
 		panic(err)
 	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"interpolationForAttribute",
 		[]interface{}{terraformAttribute},
 		&returns,
@@ -735,73 +762,73 @@ func (d *jsiiProxy_DataCloudinitConfig) InterpolationForAttribute(terraformAttri
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) OverrideLogicalId(newLogicalId *string) {
-	if err := d.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+func (c *jsiiProxy_Config) OverrideLogicalId(newLogicalId *string) {
+	if err := c.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		d,
+		c,
 		"overrideLogicalId",
 		[]interface{}{newLogicalId},
 	)
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) PutPart(value interface{}) {
-	if err := d.validatePutPartParameters(value); err != nil {
+func (c *jsiiProxy_Config) PutPart(value interface{}) {
+	if err := c.validatePutPartParameters(value); err != nil {
 		panic(err)
 	}
 	_jsii_.InvokeVoid(
-		d,
+		c,
 		"putPart",
 		[]interface{}{value},
 	)
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) ResetBase64Encode() {
+func (c *jsiiProxy_Config) ResetBase64Encode() {
 	_jsii_.InvokeVoid(
-		d,
+		c,
 		"resetBase64Encode",
 		nil, // no parameters
 	)
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) ResetBoundary() {
+func (c *jsiiProxy_Config) ResetBoundary() {
 	_jsii_.InvokeVoid(
-		d,
+		c,
 		"resetBoundary",
 		nil, // no parameters
 	)
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) ResetGzip() {
+func (c *jsiiProxy_Config) ResetGzip() {
 	_jsii_.InvokeVoid(
-		d,
+		c,
 		"resetGzip",
 		nil, // no parameters
 	)
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) ResetId() {
+func (c *jsiiProxy_Config) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
-		d,
-		"resetId",
-		nil, // no parameters
-	)
-}
-
-func (d *jsiiProxy_DataCloudinitConfig) ResetOverrideLogicalId() {
-	_jsii_.InvokeVoid(
-		d,
+		c,
 		"resetOverrideLogicalId",
 		nil, // no parameters
 	)
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) SynthesizeAttributes() *map[string]interface{} {
+func (c *jsiiProxy_Config) ResetPart() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetPart",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_Config) SynthesizeAttributes() *map[string]interface{} {
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"synthesizeAttributes",
 		nil, // no parameters
 		&returns,
@@ -810,11 +837,11 @@ func (d *jsiiProxy_DataCloudinitConfig) SynthesizeAttributes() *map[string]inter
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) ToMetadata() interface{} {
+func (c *jsiiProxy_Config) ToMetadata() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"toMetadata",
 		nil, // no parameters
 		&returns,
@@ -823,11 +850,11 @@ func (d *jsiiProxy_DataCloudinitConfig) ToMetadata() interface{} {
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) ToString() *string {
+func (c *jsiiProxy_Config) ToString() *string {
 	var returns *string
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"toString",
 		nil, // no parameters
 		&returns,
@@ -836,11 +863,11 @@ func (d *jsiiProxy_DataCloudinitConfig) ToString() *string {
 	return returns
 }
 
-func (d *jsiiProxy_DataCloudinitConfig) ToTerraform() interface{} {
+func (c *jsiiProxy_Config) ToTerraform() interface{} {
 	var returns interface{}
 
 	_jsii_.Invoke(
-		d,
+		c,
 		"toTerraform",
 		nil, // no parameters
 		&returns,
