@@ -80,6 +80,10 @@ func (j *jsiiProxy_Config) validateSetConnectionParameters(val interface{}) erro
 	return nil
 }
 
+func (j *jsiiProxy_Config) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_Config) validateSetGzipParameters(val interface{}) error {
 	return nil
 }

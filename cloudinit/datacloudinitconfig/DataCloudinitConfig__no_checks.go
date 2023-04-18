@@ -76,6 +76,10 @@ func (j *jsiiProxy_DataCloudinitConfig) validateSetBoundaryParameters(val *strin
 	return nil
 }
 
+func (j *jsiiProxy_DataCloudinitConfig) validateSetCountParameters(val interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataCloudinitConfig) validateSetGzipParameters(val interface{}) error {
 	return nil
 }
