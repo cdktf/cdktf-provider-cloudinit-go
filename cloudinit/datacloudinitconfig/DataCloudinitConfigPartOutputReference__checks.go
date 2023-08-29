@@ -1,3 +1,6 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 //go:build !no_runtime_type_checking
 
 package datacloudinitconfig
@@ -189,6 +192,8 @@ func (j *jsiiProxy_DataCloudinitConfigPartOutputReference) validateSetFilenamePa
 
 func (j *jsiiProxy_DataCloudinitConfigPartOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
 	case *DataCloudinitConfigPart:
 		val := val.(*DataCloudinitConfigPart)
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
@@ -200,11 +205,9 @@ func (j *jsiiProxy_DataCloudinitConfigPartOutputReference) validateSetInternalVa
 		if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
 			return err
 		}
-	case cdktf.IResolvable:
-		// ok
 	default:
 		if !_jsii_.IsAnonymousProxy(val) {
-			return fmt.Errorf("parameter val must be one of the allowed types: *DataCloudinitConfigPart, cdktf.IResolvable; received %#v (a %T)", val, val)
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *DataCloudinitConfigPart; received %#v (a %T)", val, val)
 		}
 	}
 
