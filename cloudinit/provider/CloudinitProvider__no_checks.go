@@ -15,6 +15,10 @@ func (c *jsiiProxy_CloudinitProvider) validateOverrideLogicalIdParameters(newLog
 	return nil
 }
 
+func validateCloudinitProvider_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
+	return nil
+}
+
 func validateCloudinitProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }

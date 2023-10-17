@@ -5,9 +5,9 @@ package config
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/jsii"
 
-	"github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v8/config/internal"
+	"github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/v9/config/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
