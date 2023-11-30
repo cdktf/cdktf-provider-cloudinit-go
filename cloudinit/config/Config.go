@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config cloudinit_config}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/resources/config cloudinit_config}.
 type Config interface {
 	cdktf.TerraformResource
 	Base64Encode() interface{}
@@ -391,7 +391,7 @@ func (j *jsiiProxy_Config) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config cloudinit_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/resources/config cloudinit_config} Resource.
 func NewConfig(scope constructs.Construct, id *string, config *ConfigConfig) Config {
 	_init_.Initialize()
 
@@ -409,7 +409,7 @@ func NewConfig(scope constructs.Construct, id *string, config *ConfigConfig) Con
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs/resources/config cloudinit_config} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/resources/config cloudinit_config} Resource.
 func NewConfig_Override(c Config, scope constructs.Construct, id *string, config *ConfigConfig) {
 	_init_.Initialize()
 

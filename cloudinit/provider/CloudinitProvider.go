@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs cloudinit}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs cloudinit}.
 type CloudinitProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -183,7 +183,7 @@ func (j *jsiiProxy_CloudinitProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs cloudinit} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs cloudinit} Resource.
 func NewCloudinitProvider(scope constructs.Construct, id *string, config *CloudinitProviderConfig) CloudinitProvider {
 	_init_.Initialize()
 
@@ -201,7 +201,7 @@ func NewCloudinitProvider(scope constructs.Construct, id *string, config *Cloudi
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.2/docs cloudinit} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs cloudinit} Resource.
 func NewCloudinitProvider_Override(c CloudinitProvider, scope constructs.Construct, id *string, config *CloudinitProviderConfig) {
 	_init_.Initialize()
 
