@@ -26,19 +26,19 @@ type DataCloudinitConfigConfig struct {
 	//
 	// Defaults to `true`, and cannot be disabled if gzip is `true`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#base64_encode DataCloudinitConfig#base64_encode}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs/data-sources/config#base64_encode DataCloudinitConfig#base64_encode}
 	Base64Encode interface{} `field:"optional" json:"base64Encode" yaml:"base64Encode"`
 	// Specify the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#boundary DataCloudinitConfig#boundary}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs/data-sources/config#boundary DataCloudinitConfig#boundary}
 	Boundary *string `field:"optional" json:"boundary" yaml:"boundary"`
 	// Specify whether or not to gzip the `rendered` output. Defaults to `true`.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#gzip DataCloudinitConfig#gzip}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs/data-sources/config#gzip DataCloudinitConfig#gzip}
 	Gzip interface{} `field:"optional" json:"gzip" yaml:"gzip"`
 	// part block.
 	//
-	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs/data-sources/config#part DataCloudinitConfig#part}
+	// Docs at Terraform Registry: {@link https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs/data-sources/config#part DataCloudinitConfig#part}
 	Part interface{} `field:"optional" json:"part" yaml:"part"`
 }
 

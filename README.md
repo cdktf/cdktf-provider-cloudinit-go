@@ -1,12 +1,15 @@
-# CDKTF Go bindings for hashicorp/cloudinit provider version 2.3.3
+# CDKTF Go bindings for hashicorp/cloudinit provider version 2.3.4
 
-This repo builds and publishes the [Terraform cloudinit provider](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform cloudinit provider](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Go Package
 
 The go package is generated into the [`github.com/cdktf/cdktf-provider-cloudinit-go`](https://github.com/cdktf/cdktf-provider-cloudinit-go) package.
 
-`go get github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit`
+`go get github.com/cdktf/cdktf-provider-cloudinit-go/cloudinit/<version>`
+
+Where `<version>` is the version of the prebuilt provider you would like to use e.g. `v11`. The full module name can be found
+within the [go.mod](https://github.com/cdktf/cdktf-provider-cloudinit-go/blob/main/cloudinit/go.mod#L1) file.
 
 ## Docs
 
@@ -20,7 +23,7 @@ This project is explicitly not tracking the Terraform cloudinit provider version
 These are the upstream dependencies:
 
 * [CDK for Terraform](https://cdk.tf)
-* [Terraform cloudinit provider](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.3)
+* [Terraform cloudinit provider](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4)
 * [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.
