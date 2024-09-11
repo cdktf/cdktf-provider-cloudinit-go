@@ -1,6 +1,6 @@
-# CDKTF Go bindings for hashicorp/cloudinit provider version 2.3.4
+# CDKTF Go bindings for hashicorp/cloudinit provider version 2.3.5
 
-This repo builds and publishes the [Terraform cloudinit provider](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform cloudinit provider](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Go Package
 
@@ -23,7 +23,7 @@ This project is explicitly not tracking the Terraform cloudinit provider version
 These are the upstream dependencies:
 
 * [CDK for Terraform](https://cdk.tf)
-* [Terraform cloudinit provider](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.4)
+* [Terraform cloudinit provider](https://registry.terraform.io/providers/hashicorp/cloudinit/2.3.5)
 * [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.
